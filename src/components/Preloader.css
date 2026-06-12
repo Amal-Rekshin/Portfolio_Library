@@ -1,0 +1,129 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background: #050816;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 2000px;
+}
+
+/* Background Grid */
+.preloader__bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(124, 58, 237, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 58, 237, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.5;
+}
+
+/* Floating Particles */
+.preloader__particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.preloader__particle {
+  position: absolute;
+  background: var(--accent-violet);
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.preloader__particle:nth-child(odd) {
+  background: var(--accent-cyan);
+}
+
+/* Content */
+.preloader__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* Logo Letters */
+.preloader__logo {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 24px;
+  perspective: 1000px;
+}
+
+.preloader__logo-letter {
+  display: inline-block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(48px, 10vw, 80px);
+  font-weight: 700;
+  background: linear-gradient(135deg, #FFFFFF 0%, #A78BFA 50%, #22D3EE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0;
+  filter: drop-shadow(0 0 30px rgba(124, 58, 237, 0.5));
+}
+
+/* Tagline */
+.preloader__tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--text-muted);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  opacity: 0;
+}
+
+/* Progress Bar */
+.preloader__progress-track {
+  width: 200px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  margin: 0 auto 12px;
+  overflow: hidden;
+}
+
+.preloader__progress-fill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-violet), var(--accent-cyan));
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.5);
+}
+
+.preloader__progress-text {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+}
+
+/* Ambient Lights */
+.preloader__ambient {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.preloader__ambient--purple {
+  background: var(--accent-violet);
+  top: -100px;
+  right: -100px;
+}
+
+.preloader__ambient--cyan {
+  background: var(--accent-cyan);
+  bottom: -100px;
+  left: -100px;
+}
