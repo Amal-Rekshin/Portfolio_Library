@@ -1,0 +1,24 @@
+#block1,#block2,#block3,#block4{
+    position: relative;
+}
+
+section{
+    position: absolute;
+    top: 0;
+}
+
+#block1{
+    display: block;
+}
+
+#block2{
+    display: none;
+}
+
+#block3{
+    display: none;
+}
+
+#block4{
+    display: none;
+}

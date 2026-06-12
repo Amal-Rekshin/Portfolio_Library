@@ -1,137 +1,165 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <nav>
-        <div class="NavBar">
-            <h1><span style="--clr:#00d9ff">P</span>ORTFOLIO</h1>
-            <ul>
-                <li><a href="#containers">Home</a></li>
-                <li><a href="#callingAbour">About</a></li>
-                <li><a href="#cerifisplit">My Certificate</a></li>
-                <li><a href="#contactFor">Contact</a></li>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styless.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+  </head>
+  <body>
+
+    
+    <!-- Navbar Section -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand p-3" href="#"><span>P</span>ortfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false" >
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto ">
+                <li class="nav-item p-2" >
+                <a class="nav-link active" id="home" aria-current="page" href="#home">Home</a>
+                </li>
+                <li class="nav-item p-2">
+                <a class="nav-link active" id="about" aria-current="page" href="#about">About</a>
+                </li>
+                <li class="nav-item p-2">
+                <a class="nav-link active" id="certificate" aria-current="page" href="#Certificate">Certificates</a>
+                </li>
+                <li class="nav-item p-2">
+                <a class="nav-link active" id="contactfor" aria-current="page" href="#contactFor">Contact</a>
+                </li>
             </ul>
+            </div>
         </div>
     </nav>
-    <div class="container" id="containers">
-        <div class="MostLeft">
-            <p>
-                PORTFOLIO
-            </p>
-        </div>
-        <div class="LeftContent">
-            <h1>
+
+
+<div id="block1">
+    <section class="home" id="home">
+        <div class="row min-vh-100 align-items-centre align-content-center">
+          <div class="col-md-5 p-0">
+            <div class="home-img text-center m-1 my-xs-1 my-sm-2 my-md-3 my-lg-4 my-xl-5">
+              <div class="imgss animate__animated animate__fadeInRight animate__delay-1s">
+                <img src="./img/rek.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7 order-md-first align-items-centre align-content-center">
+            <div class="home-text ms-5 ps-5">
+              <h1 class="animate__animated animate__bounceInLeft animate__delay-1s">
                 I'm <span>A</span>ntony <span>A</span>mal <span>R</span>ekshin...
-            </h1>
-            <h2>Frontend Developer</h2>
-            <p>
-                I'm Rekshin, as a front-end web developer, you likely have a keen eye for design <br>and detail, working with technologies like HTML, CSS to create visually appealing <br>and interactive websites. My role combines  creativity with technical skills, ensuring <br> that user interfaces are both functional and aesthetically pleasing. It's a great field<br> for someone with a passion for web design and user experience!
-            </p>
-            <a href="#callingAbour">
-                <button>About</button>
-            </a>
-            <div class="AppIcons">
-                <div class="git">
-                    <a href="https://github.com/Amal-Rekshin"><i class="fa-brands fa-github-alt"></i></a>
-                    <p>GitHub</p>
-                </div>
-                <div class="linkedin">
-                    <a href="https://www.linkedin.com/in/antony-amal-rekshin-a-751537281/"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <p>LinkedIn</p>
-                </div>
-                <div class="instagram">
-                    <a href="https://www.instagram.com/_rekx_in/"><i class="fa-brands fa-instagram"></i></a>
-                    <p>Instagram</p>
-                </div>
+              </h1>
+              <h4 class="animate__animated animate__bounceInLeft animate__delay-1s">Frontend Developer</h4>
+              <p class="animate__animated animate__fadeInDown animate__delay-1s">
+                I'm Rekshin, as a front-end web developer, you likely have a keen eye for design and detail, working with technologies like HTML, CSS to create visually appealing and interactive websites. My role combines  creativity with technical skills, ensuring that user interfaces are both functional and aesthetically pleasing. It's a great fieldfor someone with a passion for web design and user experience!!!
+              </p>
+              <div class="butttttton animate__animated animate__fadeInBottomLeft animate__delay-1s">
+              <a href="#about">
+              <button class="btn btn-outline-primary px-5 py-3 mx-5 my-xs-1 my-sm-2 my-md-3 my-lg-4 my-xl-5 " id="abtbut" >About Me</button></a>
             </div>
+          </div>
         </div>
-        <div class="RightContent">
-            <div class="MyImg">
-                <img src="rek.jpg">
-            </div>
-        </div>
-    </div>
-<div id="callingAbour">
-    <i class="italic">1</i>
+      </div>
+      </section>
 </div>
-    <div id="aboutMe">
-        <h1 class="ABout"> <span>A</span>bout <span>M</span>e:</h1>
-    <div class="AboutContainer">
-        <div class="leftside">
-            <div class="AboutLeft">
-                <h1>Frontend Developer</h1>
-                <P>
-                My name is Antony Amal Rekshin, and I am currently pursuing a degree in Computer  Science Engineering at St. Mother Theresa Engineering College. With a passion for technology, I have developed a strong  foundation in frontend development, specializing in HTML and CSS. These skills enable me to create responsive and visually appealing web applications that enhance user engagement. I am continuously seeking to improve my coding skills and stay updated with the latest trends and technologies in frontend development.</P>
-            </div>
-            <div class="leftimgitem">
-                <h2>HTML & CSS</h2>
-                <img id="img1" src="./HTML.png" alt="HTML">
-                <img id="img2" src="./blue.png" alt="CSS">
-            </div>
-        </div>
-        <div class="rightside">
-            <div class="AboutRight">
-                <h1>UI/UX Design</h1>
-                <p>In addition to my technical expertise, I have a keen interest in UI/UX design. I focus on crafting intuitive user experiences that prioritize usability and accessibility. My understanding of design principles allows me to bridge the gap between aesthetics and functionality, ensuring that users have a seamless experience when interacting with digital products. I believe that effective design is crucial in today’s digital landscape, and I am excited to further develop my skills in this area as I progress in my studies and career.</p>
-            </div>
-            <div class="rightimg">
-                <h2>UI/UX Design</h2>
-                <img id="img3" src="./figma.png" alt="Figma">
-                <img id="img4" src="./Adobe XD.png" alt="Adobe XD">
-            </div>
-        </div>
-    </div>
-    </div>
-    <div id="cerifisplit">
-        <i class="it"></i>
-    </div>
-    <div class="certificates">
-        <h1><span>C</span>ertificates</h1>
-        <div class="cerificate1">
-            <h1 style="--font:#2500b9">UI/UX Design Certificate</h1>
-            <img src="cer1.jpg" style="--clr:#2500b9">
-        </div>
-        <div class="cerificate1">
-            <h1 style="--font:#f06400">Ultimate UI/UX Hands On Workshop</h1>
-            <img src="cer5.png" style="--clr:#f06400">
-        </div>
-        <div class="cerificate1">
-            <h1 style="--font:#2500b9">Journal Published Certificate</h1>
-            <img src="cer3.jpg" style="--clr:#2500b9">
-        </div>
-        <div class="cerificate1">
-            <h1 style="--font:#f06400">Python Bootcamp Certificate</h1>
-            <img src="cer4.jpg" style="--clr:#f06400">
-        </div>
-        <div class="cerificate1">
-            <h1 style="--font:#b10000">AI Design Challenge Certificate</h1>
-            <img src="cer2.jpg" style="--clr:#b10000">
-        </div>
-    </div>
-    <div id="contactFor">
-        <div class="Contact">
-            <h1><span>C</span>ontact:</h1>
-                <div class="infobox">
-                    <div class="info">
-                        <a href="#contactFor"><i class="fa-solid fa-phone"></i>6383792232</a>
-                    </div>
-                    <div class="info">
-                        <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new"><i class="fa-regular fa-envelope"></i>antonyamalrekshin@gmail.com</a>
-                    </div>
-                    <div class="info">
-                        <a href="https://www.linkedin.com/in/antony-amal-rekshin-a-751537281/"><i class="fa-brands fa-linkedin-in"></i>Antony Amal Rekshin</a>
-                    </div>
-                    <div class="info">
-                        <a href="https://github.com/Amal-Rekshin"><i class="fa-brands fa-github-alt"></i>Amal-Rekshin</a>
+
+
+<div id="block2">
+    <!-- About Section -->
+    <section class="about animate__animated animate__flipInX animate__slow py-5" id="about">
+        <div class="container-lg py-5">
+            <h2 class="fw-bold mb-5 text-center">About Me</h2>
+                <div class="row">
+                    <div class="col-lg-6 ">
+                        <div class="select-title p-4 m-4 my-xs-1 my-sm-2 my-md-3 my-lg-4 my-xl-5">
+                            <h1 class="my-5">Frontend Developer</h1>
+                                <h4>
+                                    My name is Antony Amal Rekshin, and I am currently pursuing a degree in Computer  Science Engineering at St. Mother Theresa Engineering College. With a passion for technology, I have developed a strong  foundation in frontend development, specializing in HTML and CSS. These skills enable me to create responsive and visually appealing web applications that enhance user engagement. I am continuously seeking to improve my coding skills and stay updated with the latest trends and technologies in frontend development.
+                                </h4>
+                            </div>
+                        </div>
+                    <div class="col-lg-6">
+                        <div class="select-title p-4 m-4 my-xs-1 my-sm-2 my-md-3 my-lg-4 my-xl-5">
+                            <h1 class="my-5">UI/UX Designer</h1>
+                            <h4>In addition to my technical expertise, I have a keen interest in UI/UX design. I focus on crafting intuitive user experiences that prioritize usability and accessibility. My understanding of design principles allows me to bridge the gap between aesthetics and functionality, ensuring that users have a seamless experience when interacting with digital products. I believe that effective design is crucial in today’s digital landscape, and I am excited to further develop my skills in this area as I progress in my studies and career.</h4>
+                        </div>
                     </div>
                 </div>
         </div>
-    </div>
-</body>
+    </section>
+</div>
+
+
+<div id="block3">
+    <!-- Certificate Section -->
+
+    <section class="gallery min-vh-100  animate__animated animate__fadeIn " id="Certificate">
+        <div class="container-lg">
+          <div class="row gy-4 row-cols-1 row-cols-sm-1 row-cols-md-1 my-5 py-5">
+              <div class="text">
+                <h1 class="text-center fw-bold">Certificate</h1>
+              </div>
+              <div class="col">
+                <img src="./img/cer1.jpg" class="img-fluid" style="--clr-cer:#2500b9;">
+              </div>
+              <div class="col">
+                <img src="./img/cer2.jpg" class="img-fluid" style="--clr-cer:#f06400;">
+              </div>
+              <div class="col">
+                <img src="./img/cer3.jpg" class="img-fluid" style="--clr-cer:#2500b9;>
+              </div>
+              <div class="col">
+                <img src="./img/cer5.png" class="img-fluid" style="--clr-cer:#f06400;">
+              </div>
+              <div class="col">
+                <img src="./img/cer4.jpg" class="img-fluid" style="--clr-cer:#2500b9;">
+              </div>
+              <div class="col">
+                <img src="./img/cer6.jpg" class="img-fluid" style="--clr-cer:#ffc400;">
+              </div>
+          </div>
+        </div>
+    </section>
+</div>
+
+<div id="block4">
+        <!-- Contact Me Section -->
+
+        <section class="animate__animated animate__zoomInDown animate__slow">
+            <div id="contactFor">
+              <div class="Contact">
+                  <h1 class="text-center"><span>C</span>ontact:</h1>
+                      <div class="infobox">
+                          <div class="info my-3">
+                              <a href="#contactFor" class="text-decoration-none"><i class="fa-solid fa-phone p-4 fs-2"></i><span class="fs-3">6383792232</span></a>
+                          </div>
+                          <div class="info my-3">
+                              <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new" class="text-decoration-none"><i class="fa-regular fa-envelope p-4 fs-2"></i><span class="fs-4">antonyamalrekshin@gmail.com</span></a>
+                          </div>
+                          <div class="info my-3">
+                              <a href="https://www.linkedin.com/in/antony-amal-rekshin-a-751537281/" class="text-decoration-none"><i class="fa-brands fa-linkedin-in p-4 fs-2"></i><span class="fs-3">Antony Amal Rekshin</span></a>
+                          </div>
+                          <div class="info my-3">
+                              <a href="https://github.com/Amal-Rekshin" class="text-decoration-none"><i class="fa-brands fa-github-alt p-4 fs-2"></i><span class="fs-3">Amal-Rekshin</span></a>
+                          </div>
+                      </div>
+              </div>
+          </div>
+    </section>
+</div>
+
+    
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+    </body>
 </html>
