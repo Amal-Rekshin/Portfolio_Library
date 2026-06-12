@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Digital Clock",
+        "imageSrc": "/assets/projects/project1.png",
+        "description": "A sleek, real-time digital clock displaying hours, minutes, and seconds.",
+        "skills": ["HTML", "CSS", "JavaScript"],
+        "demo": "https://dctime.netlify.app/",
+        "source": "https://github.com/Amal-Rekshin/Digital_clock"
+    },
+    {
+        "title": "Food WebSite",
+        "imageSrc": "/assets/projects/project2.png",
+        "description": "This is a project made to learn the latest languages by building an app.",
+        "skills": ["HTML", "CSS", "BootStrap", "Animi"],
+        "demo": "https://foodie-sites.netlify.app/",
+        "source": "https://github.com/Amal-Rekshin/Food-Web"
+    },
+    {
+        "title": "Project C",
+        "imageSrc": "/assets/projects/project.png",
+        "description": "This is a project made to learn the latest languages by building an app.",
+        "skills": ["React", "Express", "Node"],
+        "demo": "https://www.example.com",
+        "source": "https://www.github.com"
+    }
+]
