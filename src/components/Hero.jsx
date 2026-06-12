@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import LazyImage from './LazyImage';
 import Magnetic from './Magnetic';
 import './Hero.css';
 import figma_icon from '../assets/figma.png';
@@ -77,12 +78,12 @@ const Hero = () => {
   }, []);
 
   const techCards = [
-    { icon: <img src={react_icon} alt="React" className="hero__tech-img" />, label: 'React', color: '#61DAFB' },
-    { icon: <img src={spring_icon} alt="Spring Boot" className="hero__tech-img" />, label: 'Spring Boot', color: '#6DB33F' },
-    { icon: <img src={figma_icon} alt="Figma" className="hero__tech-img" />, label: 'Figma', color: '#F24E1E' },
-    { icon: <img src={mysql_icon} alt="MySQL" className="hero__tech-img" />, label: 'MySQL', color: '#4479A1' },
-    { icon: <img src={java_icon} alt="Java" className="hero__tech-img" />, label: 'Java', color: '#ED8B00' },
-    { icon: <img src={tailwind_icon} alt="Tailwind CSS" className="hero__tech-img" />, label: 'Tailwind CSS', color: '#06B6D4' },
+    { icon: <LazyImage src={react_icon} alt="React" className="hero__tech-img" />, label: 'React', color: '#61DAFB' },
+    { icon: <LazyImage src={spring_icon} alt="Spring Boot" className="hero__tech-img" />, label: 'Spring Boot', color: '#6DB33F' },
+    { icon: <LazyImage src={figma_icon} alt="Figma" className="hero__tech-img" />, label: 'Figma', color: '#F24E1E' },
+    { icon: <LazyImage src={mysql_icon} alt="MySQL" className="hero__tech-img" />, label: 'MySQL', color: '#4479A1' },
+    { icon: <LazyImage src={java_icon} alt="Java" className="hero__tech-img" />, label: 'Java', color: '#ED8B00' },
+    { icon: <LazyImage src={tailwind_icon} alt="Tailwind CSS" className="hero__tech-img" />, label: 'Tailwind CSS', color: '#06B6D4' },
   ];
 
   return (

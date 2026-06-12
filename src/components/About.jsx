@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import LazyImage from './LazyImage';
 import './About.css';
 import rex from '../assets/rekshin.jpg'
 import figma_icon from '../assets/figma.png';
@@ -30,25 +31,25 @@ const About = () => {
       year: 'Foundation',
       title: 'UI/UX Design Mastery',
       desc: 'Built a strong foundation in user-centered design, wireframing, prototyping, and design systems using Figma and Adobe XD.',
-      icon: <img src={figma_icon} alt="Design" className="about__timeline-img" />,
+      icon: <LazyImage src={figma_icon} alt="Design" className="about__timeline-img" />,
     },
     {
       year: 'Frontend',
       title: 'Frontend Development',
       desc: 'Mastered React.js, JavaScript, Tailwind CSS, and CSS animations to build interactive, responsive web applications.',
-      icon: <img src={react_icon} alt="Frontend" className="about__timeline-img" />,
+      icon: <LazyImage src={react_icon} alt="Frontend" className="about__timeline-img" />,
     },
     {
       year: 'Backend',
       title: 'Backend Engineering',
       desc: 'Developed scalable server-side applications using Java, Spring Boot, Hibernate, REST APIs, and repository patterns.',
-      icon: <img src={spring_icon} alt="Backend" className="about__timeline-img" />,
+      icon: <LazyImage src={spring_icon} alt="Backend" className="about__timeline-img" />,
     },
     {
       year: 'Database',
       title: 'Database Architecture',
       desc: 'Designed efficient relational databases with MySQL, optimized queries, and modeled complex data relationships.',
-      icon: <img src={mysql_icon} alt="Database" className="about__timeline-img" />,
+      icon: <LazyImage src={mysql_icon} alt="Database" className="about__timeline-img" />,
     },
   ];
 
@@ -73,7 +74,7 @@ const About = () => {
               <div className="about__image-placeholder">
                 {/* <span className="about__image-icon">⚡</span> */}
                 {/* <span className="about__image-name">Rekshin</span> */}
-                <img src={rex} alt="" className='about__image-name' height={"100%"} width={"100%"} />
+                <LazyImage src={rex} alt="" className='about__image-name' height={"100%"} width={"100%"} />
               </div>
               <div className="about__image-border" />
             </div>
@@ -81,7 +82,7 @@ const About = () => {
             <div className="about__info-cards">
               <div className="about__info-card glass-card">
                 <span className="about__info-icon">
-                  <img src={stack} alt="Full Stack" height="30px" width="30px" />
+                  <LazyImage src={stack} alt="Full Stack" height="30px" width="30px" />
                 </span>
                 <div>
                   <span className="about__info-value">Full Stack</span>
@@ -90,7 +91,7 @@ const About = () => {
               </div>
               <div className="about__info-card glass-card">
                 <span className="about__info-icon">
-                  <img src={figma_icon} alt="UI/UX Design" height="30px" width="30px" />
+                  <LazyImage src={figma_icon} alt="UI/UX Design" height="30px" width="30px" />
                 </span>
                 <div>
                   <span className="about__info-value">Premium</span>
@@ -115,7 +116,7 @@ const About = () => {
                   <div className="about__timeline-header">
                     <span className="about__timeline-icon">
                       {typeof item.icon === 'string' && item.icon.startsWith('http') ? (
-                        <img src={item.icon} alt="" className="about__timeline-img" />
+                        <LazyImage src={item.icon} alt="" className="about__timeline-img" />
                       ) : (
                         item.icon
                       )}

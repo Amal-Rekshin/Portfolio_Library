@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import LazyImage from './LazyImage';
 import Magnetic from './Magnetic';
 import './Skills.css';
 import adobe_xd from '../assets/adobe_xd.png';
@@ -31,59 +32,59 @@ const skillCategories = [
   {
     id: 'design',
     title: 'UI/UX Design',
-    icon: <img src={figma_icon} alt="Design" className="skills__category-img" />,
+    icon: <LazyImage src={figma_icon} alt="Design" className="skills__category-img" />,
     color: '#EC4899',
     skills: [
-      { name: 'Figma', level: 100, icon: <img src={figma_icon} alt="Figma" className="skills__tech-logo" /> },
-      { name: 'Adobe XD', level: 85, icon: <img src={adobe_xd} alt="Adobe XD" className="skills__tech-logo" /> },
-      { name: 'Wireframing', level: 92, icon: <img src={wireframe_icon} alt="Wireframing" className="skills__tech-logo" /> },
-      { name: 'Prototyping', level: 100, icon: <img src={prototype_icon} alt="Prototyping" className="skills__tech-logo" /> },
-      { name: 'User Research', level: 80, icon: <img src={research_icon} alt="User Research" className="skills__tech-logo" /> },
-      { name: 'Design Systems', level: 85, icon: <img src={design_sys_icon} alt="Design Systems" className="skills__tech-logo" /> },
-      { name: 'Responsive UI', level: 95, icon: <img src={responsive_icon} alt="Responsive UI" className="skills__tech-logo" /> },
+      { name: 'Figma', level: 100, icon: <LazyImage src={figma_icon} alt="Figma" className="skills__tech-logo" /> },
+      { name: 'Adobe XD', level: 85, icon: <LazyImage src={adobe_xd} alt="Adobe XD" className="skills__tech-logo" /> },
+      { name: 'Wireframing', level: 92, icon: <LazyImage src={wireframe_icon} alt="Wireframing" className="skills__tech-logo" /> },
+      { name: 'Prototyping', level: 100, icon: <LazyImage src={prototype_icon} alt="Prototyping" className="skills__tech-logo" /> },
+      { name: 'User Research', level: 80, icon: <LazyImage src={research_icon} alt="User Research" className="skills__tech-logo" /> },
+      { name: 'Design Systems', level: 85, icon: <LazyImage src={design_sys_icon} alt="Design Systems" className="skills__tech-logo" /> },
+      { name: 'Responsive UI', level: 95, icon: <LazyImage src={responsive_icon} alt="Responsive UI" className="skills__tech-logo" /> },
     ],
   },
   {
     id: 'frontend',
     title: 'Frontend Development',
-    icon: <img src={react_icon} alt="Frontend" className="skills__category-img" />,
+    icon: <LazyImage src={react_icon} alt="Frontend" className="skills__category-img" />,
     color: '#22D3EE',
     skills: [
-      { name: 'HTML5', level: 95, icon: <img src={html_icon} alt="HTML5" className="skills__tech-logo" /> },
-      { name: 'CSS3', level: 95, icon: <img src={css_icon} alt="CSS3" className="skills__tech-logo" /> },
-      { name: 'JavaScript', level: 80, icon: <img src={js_icon} alt="JavaScript" className="skills__tech-logo" /> },
-      { name: 'React.js', level: 85, icon: <img src={react_icon} alt="React" className="skills__tech-logo" /> },
-      { name: 'Tailwind CSS', level: 90, icon: <img src={tailwind_icon} alt="Tailwind" className="skills__tech-logo" /> },
-      { name: 'Bootstrap', level: 80, icon: <img src={bootstrap_icon} alt="Bootstrap" className="skills__tech-logo" /> },
-      { name: 'GSAP', level: 50, icon: <img src={gsap_icon} alt="GSAP" className="skills__tech-logo" /> },
+      { name: 'HTML5', level: 95, icon: <LazyImage src={html_icon} alt="HTML5" className="skills__tech-logo" /> },
+      { name: 'CSS3', level: 95, icon: <LazyImage src={css_icon} alt="CSS3" className="skills__tech-logo" /> },
+      { name: 'JavaScript', level: 80, icon: <LazyImage src={js_icon} alt="JavaScript" className="skills__tech-logo" /> },
+      { name: 'React.js', level: 85, icon: <LazyImage src={react_icon} alt="React" className="skills__tech-logo" /> },
+      { name: 'Tailwind CSS', level: 90, icon: <LazyImage src={tailwind_icon} alt="Tailwind" className="skills__tech-logo" /> },
+      { name: 'Bootstrap', level: 80, icon: <LazyImage src={bootstrap_icon} alt="Bootstrap" className="skills__tech-logo" /> },
+      { name: 'GSAP', level: 50, icon: <LazyImage src={gsap_icon} alt="GSAP" className="skills__tech-logo" /> },
     ],
   },
   {
     id: 'backend',
     title: 'Backend Development',
-    icon: <img src={spring_icon} alt="Backend" className="skills__category-img" />,
+    icon: <LazyImage src={spring_icon} alt="Backend" className="skills__category-img" />,
     color: '#8B5CF6',
     skills: [
-      { name: 'Java', level: 90, icon: <img src={java_icon} alt="Java" className="skills__tech-logo" /> },
-      { name: 'Core Java', level: 88, icon: <img src={core_java_icon} alt="Core Java" className="skills__tech-logo" /> },
-      { name: 'Spring Boot', level: 85, icon: <img src={spring_icon} alt="Spring Boot" className="skills__tech-logo" /> },
-      { name: 'Hibernate', level: 82, icon: <img src={hibernate_icon} alt="Hibernate" className="skills__tech-logo" /> },
-      { name: 'Servlet', level: 80, icon: <img src={servlet_icon} alt="Servlet" className="skills__tech-logo" /> },
-      { name: 'JSP', level: 78, icon: <img src={jsp_icon} alt="JSP" className="skills__tech-logo" /> },
-      { name: 'REST APIs', level: 88, icon: <img src={rest_icon} alt="REST APIs" className="skills__tech-logo" /> },
+      { name: 'Java', level: 90, icon: <LazyImage src={java_icon} alt="Java" className="skills__tech-logo" /> },
+      { name: 'Core Java', level: 88, icon: <LazyImage src={core_java_icon} alt="Core Java" className="skills__tech-logo" /> },
+      { name: 'Spring Boot', level: 85, icon: <LazyImage src={spring_icon} alt="Spring Boot" className="skills__tech-logo" /> },
+      { name: 'Hibernate', level: 82, icon: <LazyImage src={hibernate_icon} alt="Hibernate" className="skills__tech-logo" /> },
+      { name: 'Servlet', level: 80, icon: <LazyImage src={servlet_icon} alt="Servlet" className="skills__tech-logo" /> },
+      { name: 'JSP', level: 78, icon: <LazyImage src={jsp_icon} alt="JSP" className="skills__tech-logo" /> },
+      { name: 'REST APIs', level: 88, icon: <LazyImage src={rest_icon} alt="REST APIs" className="skills__tech-logo" /> },
     ],
   },
   {
     id: 'database',
     title: 'Database Design',
-    icon: <img src={mysql_icon} alt="Database" className="skills__category-img" />,
+    icon: <LazyImage src={mysql_icon} alt="Database" className="skills__category-img" />,
     color: '#06B6D4',
     skills: [
-      { name: 'MySQL', level: 90, icon: <img src={sql} alt="MySQL" className="skills__tech-logo" /> },
-      { name: 'MySQL Workbench', level: 85, icon: <img src={mysql_icon} alt="MySQL Workbench" className="skills__tech-logo" /> },
-      { name: 'Database Design', level: 88, icon: <img src={db_design_icon} alt="Database Design" className="skills__tech-logo" /> },
-      { name: 'SQL Queries', level: 92, icon: <img src={sql_icon} alt="SQL Queries" className="skills__tech-logo" /> },
-      { name: 'Relational Modeling', level: 85, icon: <img src={db_design_icon} alt="Relational Modeling" className="skills__tech-logo" /> },
+      { name: 'MySQL', level: 90, icon: <LazyImage src={sql} alt="MySQL" className="skills__tech-logo" /> },
+      { name: 'MySQL Workbench', level: 85, icon: <LazyImage src={mysql_icon} alt="MySQL Workbench" className="skills__tech-logo" /> },
+      { name: 'Database Design', level: 88, icon: <LazyImage src={db_design_icon} alt="Database Design" className="skills__tech-logo" /> },
+      { name: 'SQL Queries', level: 92, icon: <LazyImage src={sql_icon} alt="SQL Queries" className="skills__tech-logo" /> },
+      { name: 'Relational Modeling', level: 85, icon: <LazyImage src={db_design_icon} alt="Relational Modeling" className="skills__tech-logo" /> },
     ],
   },
 ];
@@ -116,7 +117,7 @@ const SkillCategory = ({ category, catIndex }) => {
         <div className="skills__category-header" data-cursor-hover>
           <span className="skills__category-icon">
             {typeof category.icon === 'string' && category.icon.startsWith('http') ? (
-              <img
+              <LazyImage
                 src={category.icon}
                 alt=""
                 className="skills__category-img"
@@ -144,7 +145,7 @@ const SkillCategory = ({ category, catIndex }) => {
               <div className="skills__item-info">
                 <span className="skills__item-icon">
                   {typeof skill.icon === 'string' && skill.icon.startsWith('http') ? (
-                    <img
+                    <LazyImage
                       src={skill.icon}
                       alt={skill.name}
                       className="skills__tech-logo"
@@ -216,7 +217,7 @@ const Skills = () => {
             >
               <span>
                 {typeof cat.icon === 'string' && cat.icon.startsWith('http') ? (
-                  <img src={cat.icon} alt="" className="skills__orbit-img" />
+                  <LazyImage src={cat.icon} alt="" className="skills__orbit-img" />
                 ) : (
                   cat.icon
                 )}

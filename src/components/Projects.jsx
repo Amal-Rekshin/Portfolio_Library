@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import LazyImage from './LazyImage';
 import './Projects.css';
 import rex from '../assets/rekshin.jpg'
 import food_web from '../assets/project/project2.png'
@@ -133,7 +134,7 @@ const Projects = () => {
               {/* Image area */}
               <div className="projects__card-image">
                 <div className="projects__card-placeholder" style={{ background: `linear-gradient(135deg, ${project.color}20, ${project.color}08)` }}>
-                    <img src={project.image} alt="" className='project-image'/>
+                    <LazyImage src={project.image} alt="" className='project-image'/>
                 </div>
                 <div className="projects__card-overlay">
                   <div className="projects__card-actions">
@@ -157,7 +158,7 @@ const Projects = () => {
                   {project.tags.map((tag, j) => (
                     <span key={j} className="projects__card-tag">
                       {techIcons[tag] && (
-                        <img 
+                        <LazyImage 
                           src={`https://cdn.simpleicons.org/${techIcons[tag]}/ffffff`} 
                           alt="" 
                           className="projects__tag-icon" 

@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import LazyImage from './LazyImage';
 import './Services.css';
 import figma_icon from '../assets/figma.png';
 import react_icon from '../assets/react.png';
@@ -10,37 +11,37 @@ import responsive_icon from '../assets/responsive_ui.png';
 
 const services = [
   {
-    icon: <img src={uiux_icon} alt="UI/UX" className="services__card-img" />,
+    icon: <LazyImage src={uiux_icon} alt="UI/UX" className="services__card-img" />,
     title: 'UI/UX Design',
     desc: 'Creating intuitive, beautiful interfaces that delight users with thoughtful interactions and pixel-perfect design systems.',
     features: ['User Research', 'Wireframing', 'Prototyping', 'Design Systems'],
   },
   {
-    icon: <img src={react_icon} alt="Frontend" className="services__card-img" />,
+    icon: <LazyImage src={react_icon} alt="Frontend" className="services__card-img" />,
     title: 'Frontend Development',
     desc: 'Building blazing-fast, responsive web apps with React.js, modern CSS, and cinematic GSAP animations.',
     features: ['React.js', 'Responsive Design', 'Animations', 'Performance'],
   },
   {
-    icon: <img src={spring_icon} alt="Backend" className="services__card-img" />,
+    icon: <LazyImage src={spring_icon} alt="Backend" className="services__card-img" />,
     title: 'Backend Development',
     desc: 'Engineering scalable server-side solutions with Java, Spring Boot, REST APIs, and clean architecture patterns.',
     features: ['Spring Boot', 'REST APIs', 'Hibernate', 'Security'],
   },
   {
-    icon: <img src={stack_icon} alt="Full Stack" className="services__card-img" />,
+    icon: <LazyImage src={stack_icon} alt="Full Stack" className="services__card-img" />,
     title: 'Full Stack Development',
     desc: 'End-to-end application development combining beautiful frontends with powerful, scalable backend systems.',
     features: ['React + Spring Boot', 'API Integration', 'Deployment', 'Testing'],
   },
   {
-    icon: <img src={mysql_icon} alt="Database" className="services__card-img" />,
+    icon: <LazyImage src={mysql_icon} alt="Database" className="services__card-img" />,
     title: 'Database Architecture',
     desc: 'Designing efficient, normalized database schemas with optimized queries and complex relational modeling.',
     features: ['MySQL', 'Schema Design', 'Query Optimization', 'Data Modeling'],
   },
   {
-    icon: <img src={responsive_icon} alt="Responsive Design" className="services__card-img" />,
+    icon: <LazyImage src={responsive_icon} alt="Responsive Design" className="services__card-img" />,
     title: 'Responsive Web Design',
     desc: 'Crafting seamless experiences across all devices with mobile-first approaches and fluid, adaptive layouts.',
     features: ['Mobile-First', 'Cross-Browser', 'Fluid Layouts', 'Accessibility'],
@@ -91,7 +92,7 @@ const Services = () => {
                 <div className="services__card-icon-wrapper">
                   <span className="services__card-icon">
                     {typeof service.icon === 'string' && service.icon.startsWith('http') ? (
-                      <img src={service.icon} alt="" className="services__card-img" />
+                      <LazyImage src={service.icon} alt="" className="services__card-img" />
                     ) : (
                       service.icon
                     )}

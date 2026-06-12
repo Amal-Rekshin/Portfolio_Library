@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import LazyImage from './LazyImage';
 import './TechStack.css';
 import adobe_xd from '../assets/adobe_xd.png';
 import figma_icon from '../assets/figma.png';
@@ -17,21 +18,21 @@ import git_icon from '../assets/git.png';
 import github_icon from '../assets/github.png';
 
 const technologies = [
-  { name: 'React', icon: <img src={react_icon} alt="React" className="tech__item-img" /> },
-  { name: 'Spring Boot', icon: <img src={spring_icon} alt="Spring Boot" className="tech__item-img" /> },
-  { name: 'Java', icon: <img src={java_icon} alt="Java" className="tech__item-img" /> },
-  { name: 'Tailwind CSS', icon: <img src={tailwind_icon} alt="Tailwind" className="tech__item-img" /> },
-  { name: 'MySQL', icon: <img src={mysql_icon} alt="MySQL" className="tech__item-img" /> },
-  { name: 'Figma', icon: <img src={figma_icon} alt="Figma" className="tech__item-img" /> },
-  { name: 'Adobe XD', icon: <img src={adobe_xd} alt="Adobe XD" className="tech__item-img" /> },
-  { name: 'Hibernate', icon: <img src={hibernate_icon} alt="Hibernate" className="tech__item-img" /> },
-  { name: 'Bootstrap', icon: <img src={bootstrap_icon} alt="Bootstrap" className="tech__item-img" /> },
-  { name: 'JavaScript', icon: <img src={js_icon} alt="JavaScript" className="tech__item-img" /> },
-  { name: 'HTML5', icon: <img src={html_icon} alt="HTML5" className="tech__item-img" /> },
-  { name: 'CSS3', icon: <img src={css_icon} alt="CSS3" className="tech__item-img" /> },
-  { name: 'REST APIs', icon: <img src={rest_icon} alt="REST APIs" className="tech__item-img" /> },
-  { name: 'Git', icon: <img src={git_icon} alt="Git" className="tech__item-img" /> },
-  { name: 'GitHub', icon: <img src={github_icon} alt="GitHub" className="tech__item-img" /> },
+  { name: 'React', icon: <LazyImage src={react_icon} alt="React" className="tech__item-img" /> },
+  { name: 'Spring Boot', icon: <LazyImage src={spring_icon} alt="Spring Boot" className="tech__item-img" /> },
+  { name: 'Java', icon: <LazyImage src={java_icon} alt="Java" className="tech__item-img" /> },
+  { name: 'Tailwind CSS', icon: <LazyImage src={tailwind_icon} alt="Tailwind" className="tech__item-img" /> },
+  { name: 'MySQL', icon: <LazyImage src={mysql_icon} alt="MySQL" className="tech__item-img" /> },
+  { name: 'Figma', icon: <LazyImage src={figma_icon} alt="Figma" className="tech__item-img" /> },
+  { name: 'Adobe XD', icon: <LazyImage src={adobe_xd} alt="Adobe XD" className="tech__item-img" /> },
+  { name: 'Hibernate', icon: <LazyImage src={hibernate_icon} alt="Hibernate" className="tech__item-img" /> },
+  { name: 'Bootstrap', icon: <LazyImage src={bootstrap_icon} alt="Bootstrap" className="tech__item-img" /> },
+  { name: 'JavaScript', icon: <LazyImage src={js_icon} alt="JavaScript" className="tech__item-img" /> },
+  { name: 'HTML5', icon: <LazyImage src={html_icon} alt="HTML5" className="tech__item-img" /> },
+  { name: 'CSS3', icon: <LazyImage src={css_icon} alt="CSS3" className="tech__item-img" /> },
+  { name: 'REST APIs', icon: <LazyImage src={rest_icon} alt="REST APIs" className="tech__item-img" /> },
+  { name: 'Git', icon: <LazyImage src={git_icon} alt="Git" className="tech__item-img" /> },
+  { name: 'GitHub', icon: <LazyImage src={github_icon} alt="GitHub" className="tech__item-img" /> },
 ];
 
 const TechStack = () => {
@@ -73,7 +74,7 @@ const TechStack = () => {
             <div key={i} className="tech__item glass-card" data-cursor-hover>
               <span className="tech__item-icon">
                 {typeof tech.icon === 'string' && tech.icon.startsWith('http') ? (
-                  <img src={tech.icon} alt="" className="tech__item-img" />
+                  <LazyImage src={tech.icon} alt="" className="tech__item-img" />
                 ) : (
                   tech.icon
                 )}
@@ -91,7 +92,7 @@ const TechStack = () => {
             <div key={i} className="tech__item glass-card" data-cursor-hover>
               <span className="tech__item-icon">
                 {typeof tech.icon === 'string' && tech.icon.startsWith('http') ? (
-                  <img src={tech.icon} alt="" className="tech__item-img" />
+                  <LazyImage src={tech.icon} alt="" className="tech__item-img" />
                 ) : (
                   tech.icon
                 )}
