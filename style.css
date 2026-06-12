@@ -30,8 +30,6 @@ body{
     
 }
 
-
-
 body::-webkit-scrollbar{
     display: none;
     overflow-y: scroll;
