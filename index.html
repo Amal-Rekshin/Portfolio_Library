@@ -1,137 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <nav>
-        <div class="NavBar">
-            <h1><span style="--clr:#00d9ff">P</span>ORTFOLIO</h1>
-            <ul>
-                <li><a href="#containers">Home</a></li>
-                <li><a href="#callingAbour">About</a></li>
-                <li><a href="#cerifisplit">My Certificate</a></li>
-                <li><a href="#contactFor">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div class="container" id="containers">
-        <div class="MostLeft">
-            <p>
-                PORTFOLIO
-            </p>
-        </div>
-        <div class="LeftContent">
-            <h1>
-                I'm <span>A</span>ntony <span>A</span>mal <span>R</span>ekshin...
-            </h1>
-            <h2>Frontend Developer</h2>
-            <p>
-                I'm Rekshin, as a front-end web developer, you likely have a keen eye for design <br>and detail, working with technologies like HTML, CSS to create visually appealing <br>and interactive websites. My role combines  creativity with technical skills, ensuring <br> that user interfaces are both functional and aesthetically pleasing. It's a great field<br> for someone with a passion for web design and user experience!
-            </p>
-            <a href="#callingAbour">
-                <button>About</button>
-            </a>
-            <div class="AppIcons">
-                <div class="git">
-                    <a href="https://github.com/Amal-Rekshin"><i class="fa-brands fa-github-alt"></i></a>
-                    <p>GitHub</p>
-                </div>
-                <div class="linkedin">
-                    <a href="https://www.linkedin.com/in/antony-amal-rekshin-a-751537281/"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <p>LinkedIn</p>
-                </div>
-                <div class="instagram">
-                    <a href="https://www.instagram.com/_rekx_in/"><i class="fa-brands fa-instagram"></i></a>
-                    <p>Instagram</p>
-                </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="SideBar">
+            <h1>ShowCase</h1>
+            <div class="Menus">
+                <a href="#home" id="home" class="btn active">Home</a>
+                <a href="#about" id="about" class="btn">About</a>
+                <a href="#project" id="project" class="btn">Projects</a>
+                <a href="#certificate" id="certificate" class="btn">Certificate</a>
+                <a href="#contact" id="contact" class="btn">Contact</a>
             </div>
         </div>
-        <div class="RightContent">
-            <div class="MyImg">
-                <img src="rek.jpg">
-            </div>
-        </div>
-    </div>
-<div id="callingAbour">
-    <i class="italic">1</i>
-</div>
-    <div id="aboutMe">
-        <h1 class="ABout"> <span>A</span>bout <span>M</span>e:</h1>
-    <div class="AboutContainer">
-        <div class="leftside">
-            <div class="AboutLeft">
-                <h1>Frontend Developer</h1>
-                <P>
-                My name is Antony Amal Rekshin, and I am currently pursuing a degree in Computer  Science Engineering at St. Mother Theresa Engineering College. With a passion for technology, I have developed a strong  foundation in frontend development, specializing in HTML and CSS. These skills enable me to create responsive and visually appealing web applications that enhance user engagement. I am continuously seeking to improve my coding skills and stay updated with the latest trends and technologies in frontend development.</P>
-            </div>
-            <div class="leftimgitem">
-                <h2>HTML & CSS</h2>
-                <img id="img1" src="./HTML.png" alt="HTML">
-                <img id="img2" src="./blue.png" alt="CSS">
-            </div>
-        </div>
-        <div class="rightside">
-            <div class="AboutRight">
-                <h1>UI/UX Design</h1>
-                <p>In addition to my technical expertise, I have a keen interest in UI/UX design. I focus on crafting intuitive user experiences that prioritize usability and accessibility. My understanding of design principles allows me to bridge the gap between aesthetics and functionality, ensuring that users have a seamless experience when interacting with digital products. I believe that effective design is crucial in today’s digital landscape, and I am excited to further develop my skills in this area as I progress in my studies and career.</p>
-            </div>
-            <div class="rightimg">
-                <h2>UI/UX Design</h2>
-                <img id="img3" src="./figma.png" alt="Figma">
-                <img id="img4" src="./Adobe XD.png" alt="Adobe XD">
-            </div>
-        </div>
-    </div>
-    </div>
-    <div id="cerifisplit">
-        <i class="it"></i>
-    </div>
-    <div class="certificates">
-        <h1><span>C</span>ertificates</h1>
-        <div class="cerificate1">
-            <h1 style="--font:#2500b9">UI/UX Design Certificate</h1>
-            <img src="cer1.jpg" style="--clr:#2500b9">
-        </div>
-        <div class="cerificate1">
-            <h1 style="--font:#f06400">Ultimate UI/UX Hands On Workshop</h1>
-            <img src="cer5.png" style="--clr:#f06400">
-        </div>
-        <div class="cerificate1">
-            <h1 style="--font:#2500b9">Journal Published Certificate</h1>
-            <img src="cer3.jpg" style="--clr:#2500b9">
-        </div>
-        <div class="cerificate1">
-            <h1 style="--font:#f06400">Python Bootcamp Certificate</h1>
-            <img src="cer4.jpg" style="--clr:#f06400">
-        </div>
-        <div class="cerificate1">
-            <h1 style="--font:#b10000">AI Design Challenge Certificate</h1>
-            <img src="cer2.jpg" style="--clr:#b10000">
-        </div>
-    </div>
-    <div id="contactFor">
-        <div class="Contact">
-            <h1><span>C</span>ontact:</h1>
-                <div class="infobox">
-                    <div class="info">
-                        <a href="#contactFor"><i class="fa-solid fa-phone"></i>6383792232</a>
+        <div id="section1" >
+            <section>
+                <div class="hero" id="home">
+                    <div class="hero1">
+                        <img src="./img/Picsart1.png" alt="Rekshin" height="500px" class="imgGradient">
                     </div>
-                    <div class="info">
-                        <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new"><i class="fa-regular fa-envelope"></i>antonyamalrekshin@gmail.com</a>
-                    </div>
-                    <div class="info">
-                        <a href="https://www.linkedin.com/in/antony-amal-rekshin-a-751537281/"><i class="fa-brands fa-linkedin-in"></i>Antony Amal Rekshin</a>
-                    </div>
-                    <div class="info">
-                        <a href="https://github.com/Amal-Rekshin"><i class="fa-brands fa-github-alt"></i>Amal-Rekshin</a>
+                    <div class="hero2">
+                        <h1>I'm <span>Antony Amal Rekshin</span></h1>
+                        <h2>I am a <span id="typing-text"></span><span class="cursor">|</span></h2>
+                        <p>
+                            <!-- I'm Rekshin, a front-end web developer with a keen eye for design, detail, and user experience. I build responsive, visually engaging, and interactive web interfaces using modern HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, and React. My work blends creativity with technical precision, turning ideas and UI/UX designs from Figma or Adobe XD into smooth, functional, and user-friendly digital experiences. Frontend development is where my passion for design and usability meets clean, maintainable code — allowing me to create interfaces that look refined, perform efficiently, and feel effortless to navigate. -->
+                             I'm Rekshin, a front-end web developer focused on building responsive, visually engaging, and user-friendly interfaces. I work with HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, and React, turning designs from Figma and Adobe XD into smooth, functional experiences. I blend creativity with clean coding to deliver interfaces that look polished and feel effortless to use.
+                            <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+                        </p>
+                        <button onclick="downloadResume()">Resume &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></button>
                     </div>
                 </div>
+            </section>
         </div>
-    </div>
-</body>
+        <div id="section2" >
+            <section id="about">
+                <div class="heading" style="display: inline-block;">
+                    <h1>About Me</h1>
+                </div>
+                <div class="headContent">
+                    <h2>I'm Web Developer</h2>
+                    <p>
+                        I specialize in crafting responsive, intuitive, and visually engaging web interfaces that balance functionality with refined aesthetics. My frontend development expertise spans modern HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, React, and UI/UX prototyping tools like Figma and Adobe XD. With a strong focus on clean, maintainable code and accessibility-first design, I transform static concepts into dynamic, user-centric digital experiences that perform seamlessly across all devices. From landing pages and multi-page websites to full-scale single-page applications, I build interfaces optimized for speed, usability, and visual clarity. I approach every project with a problem-solving mindset, ensuring each product feels polished, interactive, and purpose-driven
+                   
+                    </p>
+                    <h1 class="skillsdet">Skill's</h1>
+                    <div class="skills-container">
+                        <div class="skill">
+                            <h3>HTML</h3>
+                            <input type="range" min="0" max="100" value="90" class="value-bar bar1">
+                            <h3>90</h3>
+                        </div>
+                        <div class="skill">
+                            <h3>CSS</h3>
+                            <input type="range" min="0" max="100" value="85" class="value-bar bar2">
+                            <h3>85</h3>
+                        </div>
+                        <div class="skill">
+                            <h3>JavaScript (ES6+)</h3>
+                            <input type="range" min="0" max="100" value="70" class="value-bar bar3">
+                            <h3>70</h3>
+                        </div>
+                        <div class="skill">
+                            <h3>React JS</h3>
+                            <input type="range" min="0" max="100" value="55" class="value-bar bar4">
+                            <h3>55</h3>
+                        </div>
+                        <div class="skill">
+                            <h3>Bootstrap</h3>
+                            <input type="range" min="0" max="100" value="80" class="value-bar bar5">
+                            <h3>80</h3>
+                        </div>
+                        <div class="skill">
+                            <h3>Tailwind</h3>
+                            <input type="range" min="0" max="100" value="70" class="value-bar bar6">
+                            <h3>70</h3>
+                        </div>
+                        <div class="skill">
+                            <h3>Version Control</h3>
+                            <input type="range" min="0" max="100" value="40" class="value-bar bar7">
+                            <h3>40</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <h1>Education</h1>
+                <div class="Edubackground">
+                    <div class="line-container">
+                        <div class="line"></div>
+                        <div class="bullet">
+                            <div class="bulletcontainer">
+                                <h3>2022 - 2026</h3>
+                                <h2>St.Mother Theresa Engineering College</h2>
+                                <p>St. Mother Theresa Engineering College is located in Vagaikulam, Thoothukudi, offering quality technical education. I'm pursuing Computer Science Engineering, where I learn programming, software development, and emerging technologies through hands-on projects and industry-focused training.</p>
+                            </div>
+                        </div>
+                        <div class="bullet">
+                            <div class="bulletcontainer">
+                                <h3>2020 - 2022</h3>
+                                <h2>Infant Metriculation Higher Secondary school</h2>
+                                <p>I completed my higher secondary education at Infant Matriculation Higher Secondary School, Thoothukudi, where I gained a strong foundation in academic subjects along with essential skills in discipline, communication, and critical thinking. The school provided a supportive environment that prepared me well for my engineering studies.</p>
+                            </div>
+                        </div>
+                        <div class="bullet">
+                            <div class="bulletcontainer">
+                                <h3>2014 - 2020</h3>
+                                <h2>Infant Metriculation Higher Secondary school</h2>
+                                <p>Infant Matriculation Higher Secondary School, located in Thoothukudi, is known for its strong academic foundation and disciplined learning environment. The school focuses on holistic education, encouraging both academic excellence and personal growth among students.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div id="section3" >
+            <section id="project">
+                <div class="heading">
+                    <h1>Project</h1>
+                </div>
+                <div class="projectContainer">
+                    <div class="card">
+                        <img src="./img/project1.png" alt="Digital Clock" />
+                        <h3>Digital Clock</h3>
+                        <h4>Language</h4>
+                        <p>HTML | CSS | JavaScript</p>
+                        <a href="https://dctime.netlify.app/" class="btn">Demo</a>
+                        <a href="https://github.com/Amal-Rekshin/Digital_clock" class="btn">Source</a>
+                    </div>
+                    <div class="card">
+                        <img src="./img/project2.png" alt="Food Web" />
+                        <h3>Food Web</h3>
+                        <h4>Language</h4>
+                        <p>HTML | CSS | JavaScript | BootStrap</p>
+                        <a href="https://foodie-sites.netlify.app/" class="btn">Demo</a>
+                        <a href="https://github.com/Amal-Rekshin/Food-Web" class="btn">Source</a>
+                    </div>
+                    <div class="card">
+                        <img src="./img/project3.jpg" alt="Profile Picture" />
+                        <h3>Portfolio</h3>
+                        <h4>Language</h4>
+                        <p>HTML | CSS | JavaScript | React JS | Media Query</p>
+                        <a href="https://incomparable-boba-33e7d7.netlify.app/" class="btn">Demo</a>
+                        <a href="https://github.com/Amal-Rekshin/React-Portfolio" class="btn">Source</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div id="section4" >
+            <section id="certificate" class="certificate">
+                <div class="heading">
+                    <h1>Certificate</h1>
+                </div>
+                <div class="cert">
+                    <div class="cer1">
+                        <img src="./img/cer1.jpg" width="300px" height="210" alt="certificate" class="cerImg">
+                    </div>
+                    <div class="cer2">
+                        <img src="./img/cer2.jpg" width="300px" height="210" alt="certificate" class="cerImg">
+                    </div>
+                    <div class="cer3">
+                        <img src="./img/cer3.jpg" width="300px" height="210" alt="certificate" class="cerImg">
+                    </div>
+                    <div class="cer4">
+                        <img src="./img/cer4.jpg" width="300px" height="210" alt="certificate" class="cerImg">
+                    </div>
+                    <div class="cer5">
+                        <img src="./img/cer5.png" width="300px" height="210" alt="certificate" class="cerImg">
+                    </div>
+                    <div class="cer6">
+                        <img src="./img/cer6.jpg" width="300px" height="210" alt="certificate" class="cerImg">
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div id="section5" >
+            <section id="contact">
+                <div class="heading">
+                    <h1>Contact</h1>
+                </div>
+                <div class="contactContent">
+                    <div class="values">
+                        <i class="fa-solid fa-phone"></i>
+                        <h3>Call This</h3>
+                        <a href="tel:+916383792232"><h4>+91 6383792232</h4></a>
+                    </div>
+                    <div class="values">
+                        <i class="fa-brands fa-github"></i>
+                        <h3>Github</h3>
+                        <a href="https://github.com/Amal-Rekshin"><h4>Click Here <i class="fa-solid fa-up-right-from-square icons"></i></h4></a>
+                    </div>
+                    <div class="values">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <h3>Linkedin</h3>
+                        <a href="https://www.linkedin.com/in/antony-amal-rekshin-a-751537281/"><h4>Click Here <i class="fa-solid fa-up-right-from-square icons"></i></h4></a>
+                    </div>
+                </div>
+                <div class="fillForm">
+                    <form class="formContainer" action="mailto:antonyamalrekshin@gmail.com" method="GET" onsubmit="return sendEmail()">
+                        <div class="names">
+                            <input class="first" type="text" id="name" name="name" placeholder="First Name" required>
+                            <input class="last" type="text" id="last" name="last" placeholder="Last Name" required><br><br>
+                        </div>
+                        <input class="subject" type="text" id="subject" name="subject" placeholder="Subject" required><br><br>
+                        <textarea class="message" id="message" name="message" rows="5" placeholder="Message" required></textarea><br><br>
+                        <button class="submitBtn" type="submit">Send Email</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <script src="./sccript3.js"></script>
+        <script src="./script1.js"></script>
+        <script src="./script.js"></script>
+        <script src="./script5.js"></script>
+    </body>
 </html>
