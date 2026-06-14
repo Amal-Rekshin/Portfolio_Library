@@ -10,7 +10,7 @@ const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const myemail = import.meta.env.EMAIL_USER;
+  const myemail = import.meta.env.VITE_EMAIL_USER;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
