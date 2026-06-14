@@ -1,15 +1,24 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 const LazyImage = ({ src, alt, className, style, ...props }) => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const imgRef = useRef(null);
+
+  useEffect(() => {
+    if (imgRef.current && imgRef.current.complete) {
+      setIsLoaded(true);
+    }
+  }, [src]);
 
   return (
     <img
+      ref={imgRef}
       src={src}
       alt={alt}
       loading="lazy"
       decoding="async"
       onLoad={() => setIsLoaded(true)}
+      onError={() => setIsLoaded(true)}
       className={`${className || ''} ${!isLoaded ? 'skeleton-loading' : ''}`}
       style={{
         ...style,

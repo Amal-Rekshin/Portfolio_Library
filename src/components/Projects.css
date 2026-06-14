@@ -48,6 +48,7 @@
   aspect-ratio: 16/9;
   overflow: hidden;
 }
+
 .project-image {
   height: 100%;
   width: 100%;
@@ -127,6 +128,7 @@
 .projects__card-action:hover {
   background: color-mix(in srgb, var(--project-color), transparent 80%);
   border-color: var(--project-color);
+
   .project_livedemo,
   .project_github {
     color: white;
@@ -153,6 +155,7 @@
 
 .projects__card-desc {
   font-size: 14px;
+  text-align: justify;
   color: var(--text-muted);
   line-height: 1.7;
   margin-bottom: 16px;

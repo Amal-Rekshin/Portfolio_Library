@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
+import { motion } from 'framer-motion';
 import LazyImage from './LazyImage';
 import Magnetic from './Magnetic';
 import './Skills.css';
@@ -30,21 +31,6 @@ import sql from '../assets/sql.png';
 
 const skillCategories = [
   {
-    id: 'design',
-    title: 'UI/UX Design',
-    icon: <LazyImage src={figma_icon} alt="Design" className="skills__category-img" />,
-    color: '#EC4899',
-    skills: [
-      { name: 'Figma', level: 100, icon: <LazyImage src={figma_icon} alt="Figma" className="skills__tech-logo" /> },
-      { name: 'Adobe XD', level: 85, icon: <LazyImage src={adobe_xd} alt="Adobe XD" className="skills__tech-logo" /> },
-      { name: 'Wireframing', level: 92, icon: <LazyImage src={wireframe_icon} alt="Wireframing" className="skills__tech-logo" /> },
-      { name: 'Prototyping', level: 100, icon: <LazyImage src={prototype_icon} alt="Prototyping" className="skills__tech-logo" /> },
-      { name: 'User Research', level: 80, icon: <LazyImage src={research_icon} alt="User Research" className="skills__tech-logo" /> },
-      { name: 'Design Systems', level: 85, icon: <LazyImage src={design_sys_icon} alt="Design Systems" className="skills__tech-logo" /> },
-      { name: 'Responsive UI', level: 95, icon: <LazyImage src={responsive_icon} alt="Responsive UI" className="skills__tech-logo" /> },
-    ],
-  },
-  {
     id: 'frontend',
     title: 'Frontend Development',
     icon: <LazyImage src={react_icon} alt="Frontend" className="skills__category-img" />,
@@ -75,6 +61,21 @@ const skillCategories = [
     ],
   },
   {
+    id: 'design',
+    title: 'UI/UX Design',
+    icon: <LazyImage src={figma_icon} alt="Design" className="skills__category-img" />,
+    color: '#EC4899',
+    skills: [
+      { name: 'Figma', level: 100, icon: <LazyImage src={figma_icon} alt="Figma" className="skills__tech-logo" /> },
+      { name: 'Adobe XD', level: 85, icon: <LazyImage src={adobe_xd} alt="Adobe XD" className="skills__tech-logo" /> },
+      { name: 'Wireframing', level: 92, icon: <LazyImage src={wireframe_icon} alt="Wireframing" className="skills__tech-logo" /> },
+      { name: 'Prototyping', level: 100, icon: <LazyImage src={prototype_icon} alt="Prototyping" className="skills__tech-logo" /> },
+      { name: 'User Research', level: 80, icon: <LazyImage src={research_icon} alt="User Research" className="skills__tech-logo" /> },
+      { name: 'Design Systems', level: 85, icon: <LazyImage src={design_sys_icon} alt="Design Systems" className="skills__tech-logo" /> },
+      { name: 'Responsive UI', level: 95, icon: <LazyImage src={responsive_icon} alt="Responsive UI" className="skills__tech-logo" /> },
+    ],
+  },
+  {
     id: 'database',
     title: 'Database Design',
     icon: <LazyImage src={mysql_icon} alt="Database" className="skills__category-img" />,
@@ -89,89 +90,85 @@ const skillCategories = [
   },
 ];
 
-const SkillCategory = ({ category, catIndex }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const blockRef = useRef(null);
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2 }
+  }
+};
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.15 }
-    );
-    if (blockRef.current) observer.observe(blockRef.current);
-    return () => observer.disconnect();
-  }, []);
+const itemVariants = {
+  hidden: { y: 40, opacity: 0, scale: 0.95 },
+  visible: { y: 0, opacity: 1, scale: 1, transition: { type: 'spring', bounce: 0.4, duration: 0.8 } }
+};
 
+const skillItemVariants = {
+  hidden: { y: 20, opacity: 0, scale: 0.8 },
+  visible: { y: 0, opacity: 1, scale: 1, transition: { type: 'spring', stiffness: 100, damping: 10 } }
+};
+
+const SkillCategory = ({ category }) => {
   return (
-    <div
-      ref={blockRef}
-      className={`skills__category-block ${isVisible ? 'skills__category-block--visible' : ''}`}
+    <motion.div
+      variants={itemVariants}
+      className={`skills__bento-box skills__bento-box--${category.id}`}
       style={{ '--cat-color': category.color }}
+      whileHover="hover"
     >
-      <Magnetic>
-        <div className="skills__category-header" data-cursor-hover>
-          <span className="skills__category-icon">
-            {typeof category.icon === 'string' && category.icon.startsWith('http') ? (
-              <LazyImage
-                src={category.icon}
-                alt=""
-                className="skills__category-img"
-                onError={(e) => e.target.style.display = 'none'}
-              />
-            ) : (
-              category.icon
-            )}
-          </span>
-          <h3 className="skills__category-title">{category.title}</h3>
-        </div>
-      </Magnetic>
-
-      <div className="skills__grid">
-        {category.skills.map((skill, i) => (
-          <div
-            key={skill.name}
-            className="skills__item glass-card"
-            style={{
-              '--delay': `${i * 0.05}s`,
-              '--skill-color': category.color
-            }}
-          >
-            <div className="skills__item-header">
-              <div className="skills__item-info">
-                <span className="skills__item-icon">
-                  {typeof skill.icon === 'string' && skill.icon.startsWith('http') ? (
-                    <LazyImage
-                      src={skill.icon}
-                      alt={skill.name}
-                      className="skills__tech-logo"
-                      onError={(e) => e.target.style.display = 'none'}
-                    />
-                  ) : (
-                    skill.icon
-                  )}
-                </span>
-                <span className="skills__item-name">{skill.name}</span>
-              </div>
-              <span className="skills__item-level">{skill.level}%</span>
-            </div>
-            <div className="skills__item-bar">
-              <div
-                className="skills__item-fill"
-                style={{
-                  width: isVisible ? `${skill.level}%` : '0%',
-                  transitionDelay: `${(i * 0.1) + 0.2}s`,
-                }}
-              />
-            </div>
+      <div className="skills__bento-glow" />
+      <div className="skills__bento-content">
+        <Magnetic>
+          <div className="skills__category-header" data-cursor-hover>
+            <span className="skills__category-icon">
+              {typeof category.icon === 'string' && category.icon.startsWith('http') ? (
+                <LazyImage
+                  src={category.icon}
+                  alt=""
+                  className="skills__category-img"
+                  onError={(e) => e.target.style.display = 'none'}
+                />
+              ) : (
+                category.icon
+              )}
+            </span>
+            <h3 className="skills__category-title">{category.title}</h3>
           </div>
-        ))}
+        </Magnetic>
+
+        <motion.div
+          className="skills__tags-cloud"
+          variants={{
+            visible: { transition: { staggerChildren: 0.05, delayChildren: 0.2 } }
+          }}
+        >
+          {category.skills.map((skill) => (
+            <motion.div
+              variants={skillItemVariants}
+              key={skill.name}
+              className="skills__tag"
+              style={{ '--skill-color': category.color }}
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span className="skills__tag-icon">
+                {typeof skill.icon === 'string' && skill.icon.startsWith('http') ? (
+                  <LazyImage
+                    src={skill.icon}
+                    alt={skill.name}
+                    className="skills__tech-logo"
+                    onError={(e) => e.target.style.display = 'none'}
+                  />
+                ) : (
+                  skill.icon
+                )}
+              </span>
+              <span className="skills__tag-name">{skill.name}</span>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -191,40 +188,20 @@ const Skills = () => {
           </p>
         </div>
 
-        {/* All Skills Categories */}
-        <div className="skills__all-categories">
-          {skillCategories.map((category, catIndex) => (
+        <motion.div
+          className="skills__bento-grid"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
+          {skillCategories.map((category) => (
             <SkillCategory
               key={category.id}
               category={category}
-              catIndex={catIndex}
             />
           ))}
-        </div>
-
-        {/* Floating Skill Orbit */}
-        <div className="skills__orbit">
-          <div className="skills__orbit-ring" />
-          <div className="skills__orbit-ring skills__orbit-ring--2" />
-          {skillCategories.map((cat, i) => (
-            <div
-              key={cat.id}
-              className="skills__orbit-node"
-              style={{
-                '--angle': `${(360 / skillCategories.length) * i - 90}deg`,
-                '--color': cat.color,
-              }}
-            >
-              <span>
-                {typeof cat.icon === 'string' && cat.icon.startsWith('http') ? (
-                  <LazyImage src={cat.icon} alt="" className="skills__orbit-img" />
-                ) : (
-                  cat.icon
-                )}
-              </span>
-            </div>
-          ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

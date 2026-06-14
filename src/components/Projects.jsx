@@ -3,15 +3,19 @@ import LazyImage from './LazyImage';
 import './Projects.css';
 import rex from '../assets/rekshin.jpg'
 import food_web from '../assets/project/project2.png'
-import portfolio from '../assets/project/project3.jpg'
+import portfolio from '../assets/project/project3.jpeg'
 import clock from '../assets/project/project1.png'
 import timetable from '../assets/project/project4.png'
+import chat from '../assets/project/project5.jpeg'
+import ledger from '../assets/project/project6.jpeg'
+import freshrstop from '../assets/project/project7.jpeg'
+import student from '../assets/project/project8.jpeg'
 import { time } from 'framer-motion';
 
 const projects = [
   {
     title: 'E-Commerce Platform',
-    desc: 'A full-stack e-commerce platform with product management, cart system, user authentication, and admin dashboard built with React and Spring Boot.',
+    desc: 'Foodie is a full-stack e-commerce platform developed using React.js, Spring Boot, and MySQL, featuring a modern user interface with theme-based landing pages, food ordering, cart management, and secure payment integration.',
     image: food_web,
     tags: ['React.js', 'Spring Boot', 'MySQL', 'REST API'],
     color: '#7C3AED',
@@ -19,55 +23,75 @@ const projects = [
     liveDemo: 'https://foodie-sites.netlify.app',
     github: 'https://github.com/Amal-Rekshin/Food-Web.git',
   },
-  {
-    title: 'Portfolio Website',
-    desc: 'An ultra-premium portfolio website with cinematic animations, glassmorphism, interactive elements, and smooth scroll storytelling experience.',
-    image: portfolio,
-    tags: ['React.js', 'GSAP', 'CSS3', 'Framer Motion'],
-    color: '#06B6D4',
-    category: 'Frontend',
-    liveDemo: 'https://foodie-sites.netlify.app',
-    github: 'https://github.com/Amal-Rekshin/Food-Web.git',
-  },
-  {
-    title: 'Timetable Management System',
-    desc: 'AI-powered timetable generator with conflict resolution, multi-department support, and automated scheduling algorithms.',
+    {
+      title: 'Timetable Management System',
+      desc: 'AI Timetable Cloud Management is an intelligent full-stack university scheduling system built with React, Spring Boot, MySQL, and Google Gemini AI, designed to automatically generate conflict-free timetables using AI-driven optimization and cloud-based management.',
     image: timetable,
     tags: ['React.js', 'Spring Boot', 'Gemini AI', 'MySQL'],
     color: '#EC4899',
     category: 'Full Stack',
-    liveDemo: 'https://foodie-sites.netlify.app',
-    github: 'https://github.com/Amal-Rekshin/Food-Web.git',
+    liveDemo: 'https://classtimescheduler.netlify.app',
+    github: 'https://github.com/Amal-Rekshin/TimeTable_FullStack_Code.git',
   },
-  {
-    title: 'Academy Training Website',
-    desc: 'Premium training academy website with course listings, lead generation, enrollment system, and responsive mobile-first design.',
-    image: rex,
-    tags: ['React.js', 'Tailwind CSS', 'Responsive', 'SEO'],
-    color: '#8B5CF6',
-    category: 'Frontend',
-    liveDemo: 'https://foodie-sites.netlify.app',
-    github: 'https://github.com/Amal-Rekshin/Food-Web.git',
-  },
-  {
-    title: 'Admin Dashboard',
-    desc: 'Comprehensive admin panel with analytics, user management, inventory tracking, and database schema visualization.',
-    image: rex,
-    tags: ['React.js', 'Spring Boot', 'MySQL', 'Charts'],
+    {
+    title: 'Chat Web & App',
+    desc: 'Chat Web is a full-stack real-time messaging platform built with Java Spring Boot, React, MySQL, and Native Android integration, enabling secure instant communication through WebSockets, JWT authentication, and a modern responsive user experience.',
+    image: chat,
+    tags: ['React.js', 'Spring Boot', 'PostgreSQL', 'Charts','Native'],
     color: '#22D3EE',
+    category: 'Full Stack',
+    liveDemo: 'https://chat-organization.netlify.app/login',
+    github: 'https://github.com/Amal-Rekshin/Chat_Web.git',
+  },
+  {
+    title: 'Client Vendor Ledger Management',
+    desc: 'Client Vendor Ledger Management is a robust full-stack enterprise solution developed with React, Spring Boot, Postgresql providing secure, real-time financial tracking, vendor-client management, and comprehensive reporting for businesses.',
+    image: ledger,
+    tags: ['React.js', 'Spring Boot', 'PostgreSQL','REST API','Charts'],
+    color: '#15b73bff',
     category: 'Full Stack',
     liveDemo: 'https://foodie-sites.netlify.app',
     github: 'https://github.com/Amal-Rekshin/Food-Web.git',
   },
   {
     title: 'UI/UX Design System',
-    desc: 'Complete design system with component library, typography scales, color palettes, and reusable design tokens for rapid prototyping.',
-    image: rex,
-    tags: ['Figma', 'Design System', 'Components', 'Tokens'],
+    desc: 'A premium design system and component library for modern web applications built with Figma, featuring a comprehensive set of reusable UI components, design tokens, typography scales, color palettes, and interactive prototyping elements.',
+    image: freshrstop,
+    tags: ['Figma', 'Design System', 'Components',],
     color: '#F59E0B',
     category: 'Design',
-    liveDemo: 'https://foodie-sites.netlify.app',
-    github: 'https://github.com/Amal-Rekshin/Food-Web.git',
+    liveDemo: 'https://www.figma.com/design/2BVF50HJNmJEzmWdGPnxxN/FreshRstop?node-id=0-1&t=9iroOqhCbUTQxIQv-1',
+    github: 'https://github.com/Amal-Rekshin',
+  },
+  {
+    title: 'Portfolio Website',
+    desc: 'A modern portfolio website built with React, GSAP, and Framer Motion, featuring advanced animations, smooth scrolling, interactive elements, and a responsive glassmorphism design.',
+    image: portfolio,
+    tags: ['React.js', 'GSAP', 'CSS3', 'Framer Motion'],
+    color: '#06B6D4',
+    category: 'Frontend',
+    liveDemo: 'https://rekshin-portf.netlify.app',
+    github: 'https://github.com/Amal-Rekshin/Portfolio_Library.git',
+  },
+  {
+    title: 'Digital Clock',
+    desc: 'Digital Clock is a simple and intuitive clock application built with React.js, featuring a modern user interface, real-time clock display, and customizable clock settings.',
+    image: clock,
+    tags: ['JavaScript', 'CSS3', 'HTML5'],
+    color: '#06B6D4',
+    category: 'Frontend',
+    liveDemo: 'https://dctimes.netlify.app',
+    github: 'https://github.com/Amal-Rekshin/Digital_Clock.git',
+  },
+    {
+    title: 'Student Managament System',
+    desc: 'Student Management System is a full-stack web application built with React.js, Spring Boot, and PostgreSQL, designed to efficiently manage student information, and administrative tasks.',
+    image: student,
+    tags: ['React.js', 'Spring Boot', 'PostgreSQL','REST API'],
+    color: '#8B5CF6',
+    category: 'FullStack',
+    liveDemo: 'https://stumanagefrontend.netlify.app',
+    github: 'https://github.com/Amal-Rekshin/StudentManagement_Frontend',
   },
 ];
 
@@ -77,7 +101,7 @@ const techIcons = {
   'MySQL': 'mysql',
   'REST API': 'postman',
   'GSAP': 'greensock',
-  'CSS3': 'css',
+  'CSS3': 'css3',
   'Framer Motion': 'framer',
   'Gemini AI': 'google',
   'Tailwind CSS': 'tailwindcss',
@@ -87,9 +111,17 @@ const techIcons = {
   'Figma': 'figma',
   'Design System': 'storybook',
   'Components': 'webcomponentsdotorg',
-  'Tokens': 'adobe',
+  'Tokens': 'json',
+  'HTML5': 'html5',
+  'JavaScript': 'javascript',
+  'Bootstrap': 'bootstrap',
+  'Spring': 'spring',
+  'Hibernate': 'hibernate',
+  'Servlet': 'apachetomcat',
+  'PostgreSQL': 'postgresql',
+  'Adobe XD': 'sketch',
+  'Native': 'android'
 };
-
 const Projects = () => {
   const sectionRef = useRef(null);
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -120,7 +152,20 @@ const Projects = () => {
           <p className="section-subtitle">
             A curated selection of projects showcasing design thinking and technical expertise.
           </p>
-        </div>
+          <div className="projects__card-tags" style={{ justifyContent: 'center', marginTop: '20px', flexWrap: 'wrap' }}>
+            {Object.entries(techIcons).map(([techName, iconSlug], j) => (
+              <span key={j} className="projects__card-tag">
+                <LazyImage 
+                  src={`https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/${iconSlug}.svg`} 
+                  alt={techName} 
+                  className="projects__tag-icon" 
+                  style={{ filter: 'brightness(0) invert(1)' }}
+                />
+                {techName}
+              </span>
+            ))}
+          </div>
+    </div>
 
         <div className="projects__grid">
           {projects.map((project, i) => (
@@ -159,9 +204,10 @@ const Projects = () => {
                     <span key={j} className="projects__card-tag">
                       {techIcons[tag] && (
                         <LazyImage 
-                          src={`https://cdn.simpleicons.org/${techIcons[tag]}/ffffff`} 
+                          src={`https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/${techIcons[tag]}.svg`} 
                           alt="" 
                           className="projects__tag-icon" 
+                          style={{ filter: 'brightness(0) invert(1)' }}
                         />
                       )}
                       {tag}
