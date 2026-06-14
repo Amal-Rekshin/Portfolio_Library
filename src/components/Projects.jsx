@@ -50,8 +50,8 @@ const projects = [
     tags: ['React.js', 'Spring Boot', 'PostgreSQL','REST API','Charts'],
     color: '#15b73bff',
     category: 'Full Stack',
-    liveDemo: 'https://foodie-sites.netlify.app',
-    github: 'https://github.com/Amal-Rekshin/Food-Web.git',
+    liveDemo: 'https://vender-ledger.netlify.app',
+    github: 'https://github.com/Amal-Rekshin/ledger.git',
   },
   {
     title: 'UI/UX Design System',
