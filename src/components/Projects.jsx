@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import LazyImage from './LazyImage';
 import './Projects.css';
-import rex from '../assets/rekshin.jpg'
 import food_web from '../assets/project/project2.png'
-import portfolio from '../assets/project/project3.jpeg'
+import cctv from '../assets/project/project3.png'
 import clock from '../assets/project/project1.png'
 import timetable from '../assets/project/project4.png'
 import chat from '../assets/project/project5.jpeg'
@@ -64,14 +63,14 @@ const projects = [
     github: 'https://github.com/Amal-Rekshin',
   },
   {
-    title: 'Portfolio Website',
-    desc: 'A modern portfolio website built with React, GSAP, and Framer Motion, featuring advanced animations, smooth scrolling, interactive elements, and a responsive glassmorphism design.',
-    image: portfolio,
-    tags: ['React.js', 'GSAP', 'CSS3', 'Framer Motion'],
-    color: '#06B6D4',
-    category: 'Frontend',
-    liveDemo: 'https://rekshin-portf.netlify.app',
-    github: 'https://github.com/Amal-Rekshin/Portfolio_Library.git',
+    title: 'CCTV Service Management System',
+    desc: 'CCTV Service Management System is a full-stack web application built with React.js, Node JS, Express JS, and PostgreSQL, designed to efficiently manage CCTV installations, maintenance, and customer service requests.',
+    image: cctv,
+    tags: ['React.js', 'Node JS', 'Express JS', 'PostgreSQL'],
+    color: '#b1bb00ff',
+    category: 'Full Stack',
+    liveDemo: 'https://cctv-service-1.onrender.com',
+    github: 'https://github.com/Amal-Rekshin/CCTV_Service.git',
   },
   {
     title: 'Digital Clock',
@@ -120,7 +119,9 @@ const techIcons = {
   'Servlet': 'apachetomcat',
   'PostgreSQL': 'postgresql',
   'Adobe XD': 'sketch',
-  'Native': 'android'
+  'Native': 'android',
+  'Node JS': 'nodedotjs',
+  'Express JS': 'express'
 };
 const Projects = () => {
   const sectionRef = useRef(null);
