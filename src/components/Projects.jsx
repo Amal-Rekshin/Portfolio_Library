@@ -39,7 +39,7 @@ const projects = [
     tags: ['React.js', 'Spring Boot', 'PostgreSQL', 'Charts','Native'],
     color: '#22D3EE',
     category: 'Full Stack',
-    liveDemo: 'https://chat-organization.netlify.app/login',
+    liveDemo: 'https://chat-organization.netlify.app',
     github: 'https://github.com/Amal-Rekshin/Chat_Web.git',
   },
   {
